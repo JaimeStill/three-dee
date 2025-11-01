@@ -4,7 +4,7 @@ A hands-on learning repository for Three.js game development fundamentals using 
 
 ## Repository Purpose
 
-This repository contains incremental learning projects that follow the curriculum outlined in `init.md`. Each development session focuses on specific concepts through guided exploration and hands-on experimentation.
+This repository contains incremental learning projects that follow the curriculum outlined in `PROJECT.md`. Each development session focuses on specific concepts through guided exploration and hands-on experimentation.
 
 ## Roles and Workflow
 
@@ -57,7 +57,7 @@ This repository contains incremental learning projects that follow the curriculu
 ```
 three-dee/
 ├── CLAUDE.md                    # This file - Claude's guide to the repository
-├── init.md                      # Complete learning curriculum
+├── PROJECT.md                   # Complete learning curriculum and roadmap
 ├── session-01-essential-foundation/
 │   ├── README.md               # Implementation guide for this session
 │   ├── package.json            # Dependencies (Vite, Three.js)
@@ -189,7 +189,7 @@ When creating implementation guides, Claude should launch a subagent to query co
 
 ## Learning Philosophy
 
-From `init.md`:
+From `PROJECT.md`:
 1. **Build incrementally** - Master each concept before combining them
 2. **Experiment freely** - Modify parameters, break things, observe results
 3. **Refactor often** - Revisit early code with new knowledge
