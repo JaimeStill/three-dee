@@ -6,7 +6,7 @@ A progressive curriculum for building game development fundamentals with Three.j
 
 ## Phase 1: Three.js Rendering Fundamentals
 
-### 1.1 Scene, Camera, Renderer
+### 1.1 Scene, Camera, Renderer ✅
 **Goal:** Understand the basic rendering pipeline.
 
 - Initialize a Scene (container for all objects)
@@ -17,17 +17,7 @@ A progressive curriculum for building game development fundamentals with Three.j
 
 **Exercise:** Render a single colored cube in the center of the scene.
 
-### 1.2 The Animation Loop
-**Goal:** Learn continuous rendering and time-based updates.
-
-- Implement `requestAnimationFrame` loop
-- Calculate delta time between frames
-- Understand frame-independent movement
-- Monitor frame rate and performance
-
-**Exercise:** Rotate the cube continuously at a consistent speed regardless of frame rate.
-
-### 1.3 Geometry and Materials
+### 1.2 Geometry and Materials ✅
 **Goal:** Control mesh appearance and structure.
 
 - BufferGeometry basics (vertices, indices, attributes)
@@ -36,6 +26,17 @@ A progressive curriculum for building game development fundamentals with Three.j
 - Material properties (color, emissive, wireframe)
 
 **Exercise:** Create multiple geometric primitives with different materials.
+
+### 1.3 Lighting
+**Goal:** Understand how lights affect material appearance.
+
+- AmbientLight (global illumination)
+- DirectionalLight (sun-like parallel rays)
+- PointLight (omnidirectional from position)
+- Light intensity and color
+- Why MeshBasicMaterial ignores lights
+
+**Exercise:** Light a scene with multiple light sources and observe material responses.
 
 ### 1.4 Transforms and Object3D Hierarchy
 **Goal:** Master spatial relationships and scene graphs.
@@ -47,16 +48,15 @@ A progressive curriculum for building game development fundamentals with Three.j
 
 **Exercise:** Build a simple compound object (e.g., spaceship from primitives) using parent-child transforms.
 
-### 1.5 Lighting
-**Goal:** Understand how lights affect material appearance.
+### 1.5 The Animation Loop
+**Goal:** Learn continuous rendering and time-based updates.
 
-- AmbientLight (global illumination)
-- DirectionalLight (sun-like parallel rays)
-- PointLight (omnidirectional from position)
-- Light intensity and color
-- Why MeshBasicMaterial ignores lights
+- Implement `requestAnimationFrame` loop
+- Calculate delta time between frames
+- Understand frame-independent movement
+- Monitor frame rate and performance
 
-**Exercise:** Light a scene with multiple light sources and observe material responses.
+**Exercise:** Rotate the cube continuously at a consistent speed regardless of frame rate.
 
 ---
 
