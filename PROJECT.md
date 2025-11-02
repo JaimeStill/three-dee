@@ -27,7 +27,7 @@ A progressive curriculum for building game development fundamentals with Three.j
 
 **Exercise:** Create multiple geometric primitives with different materials.
 
-### 1.3 Lighting
+### 1.3 Lighting ✅
 **Goal:** Understand how lights affect material appearance.
 
 - AmbientLight (global illumination)

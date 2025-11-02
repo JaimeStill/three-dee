@@ -81,24 +81,64 @@ Building foundation for more complex applications - particularly interested in h
 
 ---
 
+## Session 03: Lighting
+**Date:** 2025-11-02
+**Duration:** ~1 hour
+**Status:** ✅ Completed
+
+### What Was Built
+- Lighting laboratory scene featuring multiple light types:
+  - PointLight (omnidirectional) with shadow configuration positioned above scene
+  - SpotLight (cone-shaped) with orange tint and visible shadow camera frustum
+  - HemisphereLight (sky-to-ground gradient) for outdoor ambient feel
+  - Very dim AmbientLight for base illumination
+- Shadow system implementation:
+  - Enabled `renderer.shadowMap` for shadow rendering
+  - Configured shadow-casting objects (box, sphere)
+  - Shadow-receiving ground plane
+  - Shadow map resolution settings (1024×1024)
+- Light helpers for visualization:
+  - PointLightHelper showing light position
+  - SpotLightHelper displaying cone shape
+  - CameraHelper revealing shadow camera frustum
+  - HemisphereLightHelper showing sky/ground colors
+
+### Key Learnings
+- **Lighting impact on scenes** - First substantial experience working with lighting; gained appreciation for how different light types and configurations dramatically affect scene atmosphere and mood
+- **Shadow system mechanics** - Understanding that shadows require shadow cameras, and objects outside the shadow camera frustum won't cast shadows
+- **Light type characteristics** - Each light type serves different purposes (PointLight for lamps/torches, SpotLight for focused beams, HemisphereLight for outdoor ambient)
+- **Performance considerations** - Shadows are expensive; typical games limit to 1-3 shadow-casting lights
+
+### Experiments Conducted
+- Explored shadow quality settings and resolution trade-offs
+- Debugged shadow camera frustums using CameraHelper
+- Experimented with PointLight distance and decay parameters
+- Tested different lighting scenarios (dramatic, outdoor, interior moods)
+- Observed how light positioning and color create atmosphere
+
+### Technical Notes
+- Encountered initial bug: ground plane rotation was `-Math.PI` instead of `-Math.PI / 2`, causing plane to be flipped upside down (back face culling made it invisible)
+- Fixed helper update calls in animation loop for SpotLight and shadow camera
+- Session completed within 1-hour timeframe with multiple experiments
+- TypeScript autocomplete helpful for discovering light properties and parameters
+
+### Reflections
+Lighting is a skill that will require considerable time to build intuition. The basic mechanics are now understood, providing a foundation to carry forward. Like other concepts in the curriculum, clarity will cement through continued experimentation and practice over time.
+
+---
+
 ## Next Session Preview
 
-**Session 03: Lighting** (following reordered Phase 1 curriculum)
-- Explore additional light types (PointLight, SpotLight, HemisphereLight)
-- Learn light positioning and scene mood
-- Understand shadows and shadow configuration
-- Light helpers for debugging
-
-**OR**
-
-**Session 03: Transforms and Object3D Hierarchy** (alternative next step)
+**Session 04: Transforms and Object3D Hierarchy** (Phase 1.4)
 - Position, rotation, scale properties
 - Local vs world space coordinates
-- Parent-child relationships and scene graphs
-- Build compound objects from primitives (spaceship assembly!)
+- Parent-child relationships
+- Group nodes for hierarchical transforms
+- Exercise: Build a simple compound object (e.g., spaceship from primitives) using parent-child transforms
 
 ---
 
 ## Repository Milestones
 
 - **2025-11-01**: Repository initialized, CLAUDE.md created, Session 01 completed, Session 02 completed, PROJECT.md Phase 1 reordered
+- **2025-11-02**: Session 03 (Lighting) completed

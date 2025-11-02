@@ -6,6 +6,8 @@ A hands-on learning repository for Three.js game development fundamentals using 
 
 This repository contains incremental learning projects that follow the curriculum outlined in `PROJECT.md`. Each development session focuses on specific concepts through guided exploration and hands-on experimentation.
 
+**IMPORTANT: The PROJECT.md roadmap should be strictly followed unless the developer explicitly directs otherwise.** Sessions proceed sequentially through the curriculum phases, building on previous concepts.
+
 ## Roles and Workflow
 
 ### The Developer's Role (Jaime - Human)
@@ -45,10 +47,13 @@ This repository contains incremental learning projects that follow the curriculu
    - Take notes on interesting discoveries
    - Ask Claude for clarification as needed
 
-4. **Documentation** (Claude)
-   - Update session README.md with final implementation notes
+4. **Documentation & Preparation** (Claude)
+   - Update LOG.md with session details (date, duration, what was built, key learnings, experiments, reflections)
+   - Check off the completed session in PROJECT.md (add ✅ to section heading)
+   - Preview the next session from PROJECT.md in LOG.md
+   - Update session README.md with final implementation notes if needed
    - Document any deviations or creative additions the developer made
-   - Prepare next session's scaffolding and guide
+   - Prepare next session's scaffolding and guide when developer is ready
 
 ## Project Structure
 
@@ -184,8 +189,8 @@ When creating implementation guides, Claude should launch a subagent to query co
 
 ### Session End
 10. Developer: "I got it working, tried 5 different light combinations"
-11. Claude: Documents what the developer built and prepares next session
-12. Developer: Takes a break or continues to next session
+11. Claude: Documents session in LOG.md, checks off in PROJECT.md, updates session README if needed
+12. Developer: Takes a break or continues to next session (Claude prepares next session when ready)
 
 ## Learning Philosophy
 
@@ -200,12 +205,34 @@ From `PROJECT.md`:
 
 ## Progress Tracking
 
-Session progress, learnings, and development milestones are tracked in `LOG.md` at the repository root. Claude should update the log file after each completed session with:
-- Date and duration
-- What was built
-- Key learnings and insights
-- Experiments conducted
-- Developer's reflections
+Session progress, learnings, and development milestones are tracked in `LOG.md` at the repository root.
+
+### Session Closeout Steps
+
+After each completed session, Claude should:
+
+1. **Update LOG.md** with:
+   - Date and duration
+   - What was built
+   - Key learnings and insights
+   - Experiments conducted
+   - Technical notes (bugs found, fixes applied)
+   - Developer's reflections
+   - Next session preview (from PROJECT.md)
+
+2. **Update PROJECT.md**:
+   - Add ✅ to the completed session heading
+
+3. **Update session README.md** (if needed):
+   - Add any corrections or clarifications discovered during the session
+   - Document any deviations or creative additions the developer made
+
+4. **Prepare next session** (when developer is ready):
+   - Create next session directory and scaffolding files
+   - Write implementation guide following PROJECT.md curriculum
+
+5. **Follow the roadmap**:
+   - The PROJECT.md curriculum should be strictly followed unless the developer explicitly requests a deviation
 
 ## Questions and Iteration
 
