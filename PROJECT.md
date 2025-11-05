@@ -38,7 +38,7 @@ A progressive curriculum for building game development fundamentals with Three.j
 
 **Exercise:** Light a scene with multiple light sources and observe material responses.
 
-### 1.4 Transforms and Object3D Hierarchy
+### 1.4 Transforms and Object3D Hierarchy ✅
 **Goal:** Master spatial relationships and scene graphs.
 
 - Position, rotation, scale properties

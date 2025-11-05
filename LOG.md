@@ -127,14 +127,68 @@ Lighting is a skill that will require considerable time to build intuition. The 
 
 ---
 
+## Session 04: Transforms and Object3D Hierarchy
+**Date:** 2025-11-05
+**Duration:** ~2 hours
+**Status:** ✅ Completed
+
+### What Was Built
+- Compound spaceship built from geometric primitives:
+  - Metallic main body (BoxGeometry)
+  - Glowing cockpit window (SphereGeometry with emissive material)
+  - Wings positioned symmetrically (BoxGeometry, left and right)
+  - Engine nozzles at rear (CylinderGeometry, rotated 90°)
+  - Engine glow effects (MeshBasicMaterial spheres)
+  - All organized in THREE.Group hierarchy
+- Solar system demonstration with nested hierarchies:
+  - Sun at center (MeshBasicMaterial - self-illuminated)
+  - Earth orbit group (child of solarSystem)
+  - Moon orbit group (child of earth)
+  - Three levels of nested orbital motion
+- Refactored spaceship into modular factory functions for cleaner code organization
+- Created comprehensive math and physics reference document (`references/math-and-physics.md`)
+
+### Key Learnings
+- **Hierarchical transforms cascade** - Parent transforms automatically affect all children while maintaining relative offsets
+- **Local vs world space** - Child positions are relative to parent, not scene origin; `getWorldPosition()` converts between coordinate systems
+- **Parent-child relationships** - `add()` creates hierarchies; transforming parent moves entire subtree
+- **Sine/cosine for animation** - Perfect for smooth oscillating motion (wings flapping, engine pulsing); both are waves shifted by 90°
+- **Phase relationships** - `cos(x) = sin(x + π/2)`; cosine starts at peak (1) while sine starts at middle (0)
+- **Tangent for angles, not animation** - `tan()` is unbounded with discontinuities; use for slope calculations and `atan2()` for direction-to-angle conversions
+- **Entity-component architecture intuition** - Starting to envision how object hierarchies map to formal game entity systems and state management patterns
+
+### Experiments Conducted
+- Implemented wing flapping with sine wave oscillation (`Math.sin(time * 2) * 0.33`)
+- Created pulsing engine glow with scale animation
+- Built three-level hierarchy (solar system → sun/earth → moon) with independent rotation speeds
+- Tested opposite phase animations (left wing vs right wing)
+- Debugged hierarchy structure to fix earth orbital motion (moved earth from sun child to solarSystem child)
+- Explored math concepts: trigonometry (SOH CAH TOA), 2D circular motion, 3D spherical coordinates
+- Applied intuition-driven experimentation by deviating from README to test understanding
+
+### Technical Notes
+- Used `getObjectByName()` for clean object access instead of array indices
+- Named all objects for maintainable code (`leftWing`, `rightWing`, `leftGlow`, etc.)
+- Discovered hierarchy structure affects what rotates: rotating sun makes earth orbit, rotating earth makes moon orbit
+- Confirmed understanding: `Math.sin(time * 2) * -1` ≠ `Math.cos(time * 2)` (90° phase difference, not inverse)
+- Session included extensive math sidebar discussions that cemented trigonometry intuition
+- Created 24KB reference document covering trig, vectors, interpolation, physics, rotations, and practical examples
+
+### Reflections
+Read through remaining experiments in README and found concepts feel intuitive and well-understood. While direct implementation would be educational, the mental models are solidified enough to revisit later when refreshing specific implementation details. Already envisioning how hierarchical transforms will integrate with entity-component systems and state-driven behaviors - the foundation for Phase 4 (Game Architecture Patterns) is starting to form intuitively.
+
+The math reference document will serve as a valuable quick-reference for future sessions, consolidating trigonometry, vector operations, and physics formulas with Three.js-specific helpers and practical code examples.
+
+---
+
 ## Next Session Preview
 
-**Session 04: Transforms and Object3D Hierarchy** (Phase 1.4)
-- Position, rotation, scale properties
-- Local vs world space coordinates
-- Parent-child relationships
-- Group nodes for hierarchical transforms
-- Exercise: Build a simple compound object (e.g., spaceship from primitives) using parent-child transforms
+**Session 05: The Animation Loop** (Phase 1.5)
+- Implement `requestAnimationFrame` loop
+- Calculate delta time between frames
+- Understand frame-independent movement
+- Monitor frame rate and performance
+- Exercise: Rotate objects continuously at consistent speed regardless of frame rate
 
 ---
 
@@ -142,3 +196,4 @@ Lighting is a skill that will require considerable time to build intuition. The 
 
 - **2025-11-01**: Repository initialized, CLAUDE.md created, Session 01 completed, Session 02 completed, PROJECT.md Phase 1 reordered
 - **2025-11-02**: Session 03 (Lighting) completed
+- **2025-11-05**: Session 04 (Transforms and Hierarchy) completed, `references/` directory created with math-and-physics.md
